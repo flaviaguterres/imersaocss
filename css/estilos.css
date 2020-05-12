@@ -1,12 +1,55 @@
+/* reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: linear-gradient(#00909e, #27496d);
-  background-size: auto 100vh;  /* largura (horizontal) e altura (vertical)  */
+  background: linear-gradient(#27496d, #00909e);
   font-family: Arial;
-  /* height: 100vh;  */ 
+  font-size: 10px;
+
+  /* Se for utilizada uma img de background:
+  largura (horizontal) e altura (vertical) */
+  /* background-size: auto 100vh;  */
+  /* height: 100vh;   */
+}
+
+/* Breakpoints */
+/* Estilos para media a partir de 400px */
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Estilos para media a partir de 600px */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Estilos para media a partir de 1200px */
+@media (min-width: 1200px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu {
   background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 
 .menu ul {
@@ -16,6 +59,11 @@ body {
 
 .menu li {
   list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
 }
 
 a {
@@ -33,6 +81,15 @@ a:hover {
   text-align: center;
 }
 
+.site-title {
+  font-size: 4em;
+}
+
 .site-subtitle {
   font-style: italic;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 180px;
 }
