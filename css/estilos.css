@@ -7,7 +7,7 @@
 
 body {
   background: linear-gradient(#27496d, #00909e);
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
   font-size: 10px;
 
   /* Se for utilizada uma img de background:
@@ -78,6 +78,7 @@ a:hover {
 .site-subtitle,
 .site-title {
   color: whitesmoke;
+  font-family: 'Roboto Mono', monospace;
   text-align: center;
 }
 
@@ -87,9 +88,56 @@ a:hover {
 
 .site-subtitle {
   font-style: italic;
+  line-height: 1.8em;
+}
+
+.portfolio {
+  height: 100vh;
+  padding: 2em;
+}
+
+.portfolio h2 {
+  color: whitesmoke;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;  /* Define o espaçamento entre cada coluna ou linha do grid */
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px; /* Define a quantidade e a largura das colunas */ 
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px); /* Define a quantidade (3) e a largura (260px) das colunas */ 
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+    background-color: pink;
+  }
+}
+
+.portfolio figure {
+  text-align: center;
 }
 
 .img-portfolio {
   height: 180px;
   width: 180px;
+  object-fit: cover; /* Ajusta as imagens de acordo com o espaço */
+  object-position: center; /* Ajusta a imagem na posição que quiser */
 }
+
+/* @media (min-width: 1200px ) {
+  .img-portfolio {
+    height: auto;
+    width: 100%;
+  }
+} */
